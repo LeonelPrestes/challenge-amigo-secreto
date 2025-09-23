@@ -6,14 +6,12 @@ function adicionarAmigo(){
         alert('Por favor, insira o nome de um amigo(a) para adicionar à lista.');
         input.focus()
         return
-    }
-    if (amigos.includes(input.value)) {
+    } if (amigos.includes(input.value)) {
         alert(`Amigo(a) ${input.value} já está na lista.`);
         input.value = '';
         input.focus();
         return
-    }
-    else {
+    } else {
         amigos.push(input.value);
         input.value = '';
         mostrarLista()
@@ -28,5 +26,19 @@ function mostrarLista(){
     amigos.forEach(element => { 
         lista.innerHTML += `<li>${element}</li>`
     });
-    console.log(amigos);
+}
+
+function sortearAmigo(){
+    let sorteado = document.getElementById('resultado')
+    if (amigos == '') {
+        sorteado.innerHTML = ''
+        alert('Primeiro adicione amigos para o sorteio')
+        return
+    } else {
+        let indexSorteado = Math.floor(Math.random()* amigos.length)
+        amigoSorteado = amigos[indexSorteado]
+        sorteado.innerHTML = `<h2>${amigoSorteado}</h2>`
+        amigos.splice(indexSorteado, 1)
+        mostrarLista()
+    }
 }
