@@ -2,7 +2,7 @@
 
 https://leonelprestes.github.io/challenge-amigo-secreto/
 
---
+---
 
 Este projeto é uma aplicação web simples e interativa desenvolvida com **HTML**, **CSS** e **JavaScript puro**, que permite adicionar nomes de amigos a uma lista e realizar sorteios aleatórios entre eles. Cada amigo sorteado é removido da lista, garantindo que não seja sorteado novamente.
 
